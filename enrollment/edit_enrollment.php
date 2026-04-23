@@ -12,7 +12,7 @@ if(isset($_POST['update'])) {
 
     $update = "UPDATE Enrollment SET semester='$semester', grade='$grade' WHERE enrollment_id=$id";
     if(mysqli_query($conn, $update)) {
-        header("Location: enrollments.php");
+        header("Location: enrollment_list.php");
     }
 }
 ?>
@@ -34,7 +34,7 @@ if(isset($_POST['update'])) {
             <input type="text" name="grade" value="<?php echo $enrollment['grade']; ?>" class="w-full border p-2 mb-4">
             
             <button name="update" class="bg-blue-600 text-white px-4 py-2 rounded">Save Changes</button>
-            <a href="enrollments.php" class="text-gray-500 ml-4">Cancel</a>
+            <a href="enrollment_list.php" class="text-gray-500 ml-4">Cancel</a>
         </form>
     </div>
 </body>

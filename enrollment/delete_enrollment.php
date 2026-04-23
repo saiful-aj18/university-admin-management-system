@@ -10,7 +10,7 @@ if(isset($_GET['id'])) {
     $stmt->bind_param("i", $id);
     
     if($stmt->execute()) {
-        header("Location: enrollments.php?msg=Deleted Successfully");
+        header("Location: enrollment_list.php?msg=Deleted Successfully");
     } else {
         echo "Error deleting record: " . $conn->error;
     }
